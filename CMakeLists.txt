@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(Render)
+project(RenderEngine3d)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -12,7 +12,7 @@ set(EXTERNAL_INCLUDES "${SDL2_INCLUDE};${SDL2_TTF_INCLUDE}")
 set(EXTERNAL_LIBRARIES "${SDL2_LIBRARIES};${SDL2_TTF_LIBRARIES}")
 set(EXTERNAL_DLLS "${SDL2_DLL};${SDL2_TTF_DLLS}")
 
-add_executable(Render
+add_executable(RenderEngine3d
         src/main.cpp
 
         src/session.hpp src/session.cpp
@@ -36,15 +36,15 @@ add_executable(Render
         src/assert.hpp src/assert.cpp
 )
 
-target_include_directories(Render PRIVATE SOURCE_INCLUDES "${EXTERNAL_INCLUDES}")
-target_link_libraries(Render PRIVATE "${EXTERNAL_LIBRARIES}")
+target_include_directories(RenderEngine3d PRIVATE SOURCE_INCLUDES "${EXTERNAL_INCLUDES}")
+target_link_libraries(RenderEngine3d PRIVATE "${EXTERNAL_LIBRARIES}")
 
 foreach(DLL ${EXTERNAL_DLLS})
     string(STRIP "${DLL}" DLL)
     add_custom_command(
-            TARGET Render
+            TARGET RenderEngine3d
             POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${DLL}"
-            $<TARGET_FILE_DIR:Render>
+            $<TARGET_FILE_DIR:RenderEngine3d>
     )
 endforeach()
