@@ -6,6 +6,6 @@
 #include "SDL_error.h"
 #include <stdexcept>
 
-__declspec(noinline) void engine_throw() {
+void engine_throw() {
     throw std::runtime_error(SDL_GetError());
 }
