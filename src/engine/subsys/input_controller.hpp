@@ -5,8 +5,9 @@
 #ifndef RENDER_INPUT_CONTROLLER_HPP
 #define RENDER_INPUT_CONTROLLER_HPP
 
-#include "scancode.hpp"
-#include "mouse.hpp"
+#include "engine/io/scancode.hpp"
+#include "engine/io/mouse.hpp"
+
 
 namespace engine {
     class Input;

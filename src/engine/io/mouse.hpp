@@ -6,7 +6,8 @@
 #define RENDER_MOUSE_HPP
 
 #include "SDL_mouse.h"
-#include "ivec2.hpp"
+#include "engine/prim/ivec2.hpp"
+
 
 namespace engine {
     enum class MouseButton {

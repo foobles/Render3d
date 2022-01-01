@@ -7,9 +7,8 @@
 
 #include "SDL_video.h"
 #include "SDL_render.h"
-
-#include "game_state.hpp"
-#include "engine_controller.hpp"
+#include "engine/game_state.hpp"
+#include "engine/engine_controller.hpp"
 
 namespace engine {
     struct GraphicsConfig {

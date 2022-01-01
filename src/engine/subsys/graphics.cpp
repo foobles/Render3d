@@ -2,9 +2,10 @@
 // Created by foobles on 11/6/2021.
 //
 
-#include "graphics.hpp"
-#include "assert.hpp"
-#include "engine.hpp"
+#include "engine/subsys/graphics.hpp"
+
+#include "engine/assert.hpp"
+#include "engine/engine.hpp"
 
 using namespace engine;
 

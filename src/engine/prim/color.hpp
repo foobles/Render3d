@@ -7,6 +7,7 @@
 
 #include <cstdint>
 
+
 namespace engine {
     struct RgbaColor {
         RgbaColor(std::uint8_t r, std::uint8_t g, std::uint8_t b, std::uint8_t a) noexcept :

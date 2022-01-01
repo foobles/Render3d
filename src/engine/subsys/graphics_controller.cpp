@@ -2,14 +2,15 @@
 // Created by foobles on 12/20/2021.
 //
 
-#include "graphics_controller.hpp"
-#include "graphics.hpp"
-#include "assert.hpp"
+#include "engine/subsys/graphics_controller.hpp"
 
 #include <algorithm>
 #include <cmath>
-
 #include "SDL_render.h"
+#include "engine/assert.hpp"
+#include "engine/subsys/graphics.hpp"
+
+
 using namespace engine;
 
 GraphicsController::GraphicsController(Graphics &graphics) noexcept :

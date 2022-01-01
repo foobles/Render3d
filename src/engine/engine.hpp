@@ -5,13 +5,13 @@
 #ifndef RENDER_ENGINE_HPP
 #define RENDER_ENGINE_HPP
 
-#include "game_state.hpp"
-#include "input.hpp"
-#include "graphics.hpp"
-#include "units.hpp"
-#include "engine_controller.hpp"
-
 #include "SDL_timer.h"
+#include "engine/engine_controller.hpp"
+#include "engine/game_state.hpp"
+#include "engine/subsys/input.hpp"
+#include "engine/subsys/graphics.hpp"
+#include "engine/prim/units.hpp"
+
 
 namespace engine {
     class Session;

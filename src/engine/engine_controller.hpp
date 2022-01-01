@@ -5,8 +5,9 @@
 #ifndef RENDER_ENGINE_CONTROLLER_HPP
 #define RENDER_ENGINE_CONTROLLER_HPP
 
-#include "graphics_controller.hpp"
-#include "input_controller.hpp"
+#include "engine/subsys/graphics_controller.hpp"
+#include "engine/subsys/input_controller.hpp"
+
 
 namespace engine {
     class Engine;

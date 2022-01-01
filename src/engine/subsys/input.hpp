@@ -6,14 +6,11 @@
 #define RENDER_INPUT_HPP
 
 #include <utility>
-
 #include "SDL_events.h"
-
-#include "engine_controller.hpp"
-#include "mouse.hpp"
-#include "scancode.hpp"
-#include "game_state.hpp"
-
+#include "engine/engine_controller.hpp"
+#include "engine/game_state.hpp"
+#include "engine/io/mouse.hpp"
+#include "engine/io/scancode.hpp"
 
 
 namespace engine {

@@ -5,8 +5,9 @@
 #ifndef RENDER_GRAPHICS_CONTROLLER_HPP
 #define RENDER_GRAPHICS_CONTROLLER_HPP
 
-#include "ivec2.hpp"
-#include "color.hpp"
+#include "engine/prim/ivec2.hpp"
+#include "engine/prim/color.hpp"
+
 
 struct SDL_Renderer;
 struct SDL_Window;

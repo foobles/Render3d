@@ -11,8 +11,9 @@
 #include <utility>
 #include <type_traits>
 #include <cstdint>
-#include "scancode.hpp"
-#include "input_controller.hpp"
+#include "engine/io/scancode.hpp"
+#include "engine/subsys/input_controller.hpp"
+
 
 namespace engine {
 

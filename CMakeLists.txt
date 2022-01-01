@@ -15,28 +15,28 @@ set(EXTERNAL_DLLS "${SDL2_DLL};${SDL2_TTF_DLLS}")
 add_executable(RenderEngine3d
         src/main.cpp
 
-        src/session.hpp src/session.cpp
-        src/game_state.hpp
+        src/engine/session.hpp src/engine/session.cpp
+        src/engine/game_state.hpp
 
-        src/engine.hpp src/engine.cpp
-        src/graphics.hpp src/graphics.cpp
-        src/input.hpp src/input.cpp
+        src/engine/engine.hpp src/engine/engine.cpp
+        src/engine/subsys/graphics.hpp src/engine/subsys/graphics.cpp
+        src/engine/subsys/input.hpp src/engine/subsys/input.cpp
 
-        src/engine_controller.hpp src/engine_controller.cpp
-        src/graphics_controller.hpp src/graphics_controller.cpp
-        src/input_controller.hpp src/input_controller.cpp
+        src/engine/engine_controller.hpp src/engine/engine_controller.cpp
+        src/engine/subsys/graphics_controller.hpp src/engine/subsys/graphics_controller.cpp
+        src/engine/subsys/input_controller.hpp src/engine/subsys/input_controller.cpp
 
-        src/scancode.hpp
-        src/mouse.hpp
-        src/keybinding.hpp
+        src/engine/io/scancode.hpp
+        src/engine/io/mouse.hpp
+        src/engine/io/keybinding.hpp
 
-        src/ivec2.hpp
-        src/color.hpp
-        src/units.hpp
-        src/assert.hpp src/assert.cpp
+        src/engine/prim/ivec2.hpp
+        src/engine/prim/color.hpp
+        src/engine/prim/units.hpp
+        src/engine/assert.hpp src/engine/assert.cpp
 )
 
-target_include_directories(RenderEngine3d PRIVATE SOURCE_INCLUDES "${EXTERNAL_INCLUDES}")
+target_include_directories(RenderEngine3d PRIVATE "${SOURCE_INCLUDES}" "${EXTERNAL_INCLUDES}")
 target_link_libraries(RenderEngine3d PRIVATE "${EXTERNAL_LIBRARIES}")
 
 foreach(DLL ${EXTERNAL_DLLS})

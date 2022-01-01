@@ -8,6 +8,7 @@
 #include <cstddef>
 #include "SDL_scancode.h"
 
+
 namespace engine {
     enum class Scancode {
         A = SDL_SCANCODE_A,

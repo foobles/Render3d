@@ -7,12 +7,13 @@
 
 #include <concepts>
 
-#include "mouse.hpp"
-#include "scancode.hpp"
-#include "units.hpp"
-#include "engine_controller.hpp"
-namespace engine {
+#include "engine/engine_controller.hpp"
+#include "engine/io/mouse.hpp"
+#include "engine/io/scancode.hpp"
+#include "engine/prim/units.hpp"
 
+
+namespace engine {
     class GameState {
     public:
         virtual void handle_update(EngineController eg, Millis delta) = 0;

@@ -2,9 +2,10 @@
 // Created by foobles on 12/23/2021.
 //
 
-#include "engine_controller.hpp"
+#include "engine/engine_controller.hpp"
 
-#include "engine.hpp"
+#include "engine/engine.hpp"
+
 
 using namespace engine;
 

@@ -2,11 +2,12 @@
 // Created by foobles on 12/5/2021.
 //
 
-#include "input_controller.hpp"
+#include "engine/subsys/input_controller.hpp"
 
-#include "input.hpp"
 #include "SDL_keyboard.h"
 #include "SDL_mouse.h"
+#include "engine/subsys/input.hpp"
+
 
 using namespace engine;
 
