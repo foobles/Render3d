@@ -76,3 +76,8 @@ void GraphicsController::drawLine(IVec2 p0, IVec2 p1) {
         }
     }
 }
+
+float GraphicsController::slope(int begin, int end, int steps) {
+    return float(end - begin) / float(steps);
+}
+
