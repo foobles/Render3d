@@ -31,10 +31,13 @@ add_executable(RenderEngine3d
         src/engine/io/keybinding.hpp
 
         src/engine/prim/ivec2.hpp
+        src/engine/prim/fvec2.hpp
+        src/engine/prim/fvec4.hpp
+        src/engine/prim/fmat4.hpp
         src/engine/prim/color.hpp
         src/engine/prim/units.hpp
         src/engine/assert.hpp src/engine/assert.cpp
-)
+        )
 
 target_include_directories(RenderEngine3d PRIVATE "${SOURCE_INCLUDES}" "${EXTERNAL_INCLUDES}")
 target_link_libraries(RenderEngine3d PRIVATE "${EXTERNAL_LIBRARIES}")
