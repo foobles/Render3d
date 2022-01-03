@@ -18,7 +18,7 @@ GraphicsController::GraphicsController(Graphics &graphics) noexcept :
     renderer(graphics.get_renderer())
 {}
 
-void GraphicsController::setColor(RgbaColor color) {
+void GraphicsController::setColor(Rgba24Color color) {
     int set_color_result = SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     engine_assert(set_color_result == 0);
 }

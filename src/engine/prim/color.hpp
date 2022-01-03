@@ -9,19 +9,16 @@
 
 
 namespace engine {
-    struct RgbaColor {
-        RgbaColor(std::uint8_t r, std::uint8_t g, std::uint8_t b, std::uint8_t a) noexcept :
+    struct Rgba24Color {
+        Rgba24Color(std::uint8_t r, std::uint8_t g, std::uint8_t b, std::uint8_t a) noexcept :
             r(r),
             g(g),
             b(b),
             a(a)
         {}
 
-        RgbaColor(std::uint8_t r, std::uint8_t g, std::uint8_t b) noexcept :
-                r(r),
-                g(g),
-                b(b),
-                a(255)
+        Rgba24Color(std::uint8_t r, std::uint8_t g, std::uint8_t b) noexcept :
+                Rgba24Color(r, g, b, 255)
         {}
 
         std::uint8_t r;

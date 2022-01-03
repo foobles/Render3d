@@ -5,6 +5,7 @@
 #ifndef RENDER_GRAPHICS_CONTROLLER_HPP
 #define RENDER_GRAPHICS_CONTROLLER_HPP
 
+#include <utility>
 #include "engine/prim/ivec2.hpp"
 #include "engine/prim/color.hpp"
 
@@ -23,7 +24,7 @@ namespace engine {
         GraphicsController(GraphicsController &&) = delete;
         GraphicsController &operator=(GraphicsController &&) = delete;
 
-        void setColor(RgbaColor color);
+        void setColor(Rgba24Color color);
         void drawPixel(IVec2 pos);
 
         [[nodiscard]] int get_window_width() const;
