@@ -24,16 +24,16 @@ namespace engine {
         GraphicsController(GraphicsController &&) = delete;
         GraphicsController &operator=(GraphicsController &&) = delete;
 
-        void setColor(Rgba24Color color);
-        void drawPixel(IVec2 pos);
+        void set_color(Rgba24Color color);
+        void draw_pixel(IVec2 pos);
 
         [[nodiscard]] int get_window_width() const;
         [[nodiscard]] int get_window_height() const;
 
-        void drawLine(IVec2 p0, IVec2 p1);
+        void draw_line(IVec2 p0, IVec2 p1);
 
         template<typename F>
-        void drawTri(IVec2 p0, IVec2 p1, IVec2 p2, F render_point);
+        void draw_tri(IVec2 p0, IVec2 p1, IVec2 p2, F render_point);
 
     private:
         static inline int tri_det(IVec2 p0, IVec2 p1, IVec2 p2) noexcept {
@@ -46,7 +46,7 @@ namespace engine {
 
 
     template<typename F>
-    void GraphicsController::drawTri(IVec2 p0, IVec2 p1, IVec2 p2, F render_point) {
+    void GraphicsController::draw_tri(IVec2 p0, IVec2 p1, IVec2 p2, F render_point) {
         int det = tri_det(p0, p1, p2);
         if (det <= 0) {
             return;

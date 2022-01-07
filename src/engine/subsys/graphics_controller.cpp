@@ -18,12 +18,12 @@ GraphicsController::GraphicsController(Graphics &graphics) noexcept :
     renderer(graphics.get_renderer())
 {}
 
-void GraphicsController::setColor(Rgba24Color color) {
+void GraphicsController::set_color(Rgba24Color color) {
     int set_color_result = SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     engine_assert(set_color_result == 0);
 }
 
-void GraphicsController::drawPixel(IVec2 pos) {
+void GraphicsController::draw_pixel(IVec2 pos) {
     int draw_pixel_result = SDL_RenderDrawPoint(renderer, pos.x, pos.y);
     engine_assert(draw_pixel_result == 0);
 }
@@ -41,7 +41,7 @@ int GraphicsController::get_window_height() const {
     return h;
 }
 
-void GraphicsController::drawLine(IVec2 p0, IVec2 p1) {
+void GraphicsController::draw_line(IVec2 p0, IVec2 p1) {
     int delta_x = p1.x - p0.x;
     int delta_y = p1.y - p0.y;
     if (std::abs(delta_x) > std::abs(delta_y)) {
@@ -57,7 +57,7 @@ void GraphicsController::drawLine(IVec2 p0, IVec2 p1) {
             bool rollover = 2*err > delta_x;
             err += std::abs(delta_y) - delta_x * rollover;
             cur.y += dir * rollover;
-            drawPixel(cur);
+            draw_pixel(cur);
         }
     } else {
         if (delta_y < 0) {
@@ -72,7 +72,7 @@ void GraphicsController::drawLine(IVec2 p0, IVec2 p1) {
             bool rollover = 2*err > delta_y;
             err += std::abs(delta_x) - delta_y * rollover;
             cur.x += dir * rollover;
-            drawPixel(cur);
+            draw_pixel(cur);
         }
     }
 }

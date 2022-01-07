@@ -22,11 +22,12 @@ public:
 
     void handle_graphics_update(EngineController eg) const override {
         auto graphics = eg.get_graphics_controller();
-        graphics.drawTri(p0, p1, p2,
-            [](GraphicsController &graphics, IVec2 pos, int det, int a0, int a1, int a2) {
-                graphics.setColor({uint8_t(a0 * 255 / det), uint8_t(a1 * 255 / det), uint8_t(a2 * 255 / det)});
-                graphics.drawPixel(pos);
-            });
+        graphics.draw_tri(p0, p1, p2,
+                          [](GraphicsController &graphics, IVec2 pos, int det, int a0, int a1, int a2) {
+                              graphics.set_color(
+                                      {uint8_t(a0 * 255 / det), uint8_t(a1 * 255 / det), uint8_t(a2 * 255 / det)});
+                              graphics.draw_pixel(pos);
+                          });
     }
 
 private:
