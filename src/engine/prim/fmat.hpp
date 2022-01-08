@@ -2,10 +2,10 @@
 // Created by foobles on 1/3/2022.
 //
 
-#ifndef RENDERENGINE3D_FMAT4_HPP
-#define RENDERENGINE3D_FMAT4_HPP
+#ifndef RENDERENGINE3D_FMAT_HPP
+#define RENDERENGINE3D_FMAT_HPP
 
-#include "engine/prim/fvec4.hpp"
+#include "engine/prim/fvec.hpp"
 
 namespace engine {
     struct FMat4 {
@@ -40,4 +40,4 @@ namespace engine {
     }
 }
 
-#endif //RENDERENGINE3D_FMAT4_HPP
+#endif //RENDERENGINE3D_FMAT_HPP

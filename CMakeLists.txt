@@ -33,10 +33,9 @@ add_executable(RenderEngine3d
         src/engine/assert.hpp src/engine/assert.cpp
         src/engine/media/texture.cpp src/engine/media/texture.hpp
 
-        src/engine/prim/ivec2.hpp
-        src/engine/prim/fvec2.hpp
-        src/engine/prim/fvec4.hpp
-        src/engine/prim/fmat4.hpp
+        src/engine/prim/ivec.hpp
+        src/engine/prim/fvec.hpp
+        src/engine/prim/fmat.hpp
         src/engine/prim/color.hpp
         src/engine/prim/units.hpp
         src/engine/assert.hpp src/engine/assert.cpp

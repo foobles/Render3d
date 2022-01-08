@@ -7,7 +7,7 @@
 
 #include <string_view>
 #include "engine/prim/color.hpp"
-#include "engine/prim/ivec2.hpp"
+#include "engine/prim/ivec.hpp"
 
 struct SDL_Surface;
 

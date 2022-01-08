@@ -6,7 +6,7 @@
 #define RENDER_GRAPHICS_CONTROLLER_HPP
 
 #include <algorithm>
-#include "engine/prim/ivec2.hpp"
+#include "engine/prim/ivec.hpp"
 #include "engine/prim/color.hpp"
 
 

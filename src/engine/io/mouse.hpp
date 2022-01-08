@@ -6,7 +6,7 @@
 #define RENDER_MOUSE_HPP
 
 #include "SDL_mouse.h"
-#include "engine/prim/ivec2.hpp"
+#include "engine/prim/ivec.hpp"
 
 
 namespace engine {
