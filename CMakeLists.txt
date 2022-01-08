@@ -30,6 +30,9 @@ add_executable(RenderEngine3d
         src/engine/io/mouse.hpp
         src/engine/io/keybinding.hpp
 
+        src/engine/assert.hpp src/engine/assert.cpp
+        src/engine/media/texture.cpp src/engine/media/texture.hpp
+
         src/engine/prim/ivec2.hpp
         src/engine/prim/fvec2.hpp
         src/engine/prim/fvec4.hpp
