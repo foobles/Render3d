@@ -9,19 +9,55 @@ namespace engine {
     struct IVec2 {
         int x;
         int y;
-
-        inline IVec2 operator+(IVec2 other) const {
-            return { x + other.x, y + other.y };
-        }
-
-        inline IVec2 operator-(IVec2 other) const {
-            return { x - other.x, y - other.y };
-        }
-
-        inline IVec2 operator-() const {
-            return { -x, -y };
-        }
     };
+
+    inline IVec2 operator+(IVec2 lhs, IVec2 rhs) noexcept {
+        return { lhs.x + rhs.x, lhs.y + rhs.y };
+    }
+
+    inline IVec2 &operator+=(IVec2 &lhs, IVec2 rhs) noexcept {
+        lhs.x += rhs.x;
+        lhs.y += rhs.x;
+        return lhs;
+    }
+
+    inline IVec2 operator-(IVec2 lhs, IVec2 rhs) noexcept {
+        return { lhs.x - rhs.x, lhs.y - rhs.y };
+    }
+
+    inline IVec2 &operator-=(IVec2 &lhs, IVec2 rhs) noexcept {
+        lhs.x -= rhs.x;
+        lhs.x -= rhs.y;
+        return lhs;
+    }
+
+    inline IVec2 operator-(IVec2 vec) noexcept {
+        return { -vec.x, -vec.y };
+    }
+
+    inline IVec2 operator*(IVec2 lhs, int rhs) noexcept {
+        return { lhs.x * rhs, lhs.y * rhs };
+    }
+
+    inline IVec2 &operator*=(IVec2 &lhs, int rhs) noexcept {
+        lhs.x *= rhs;
+        lhs.y *= rhs;
+        return lhs;
+    }
+
+    inline IVec2 operator*(int lhs, IVec2 rhs) noexcept {
+        return { lhs * rhs.x, lhs * rhs.y};
+    }
+
+    inline IVec2 operator/(IVec2 lhs, int rhs) noexcept {
+        return { lhs.x / rhs, lhs.y / rhs };
+    }
+
+    inline IVec2 &operator/=(IVec2 &lhs, int rhs) noexcept {
+        lhs.x /= rhs;
+        lhs.y /= rhs;
+        return lhs;
+    }
 }
 
 #endif //RENDER_VEC2_HPP

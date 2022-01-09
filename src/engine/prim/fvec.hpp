@@ -31,8 +31,22 @@ namespace engine {
         return {lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z};
     }
 
+    inline FVec3 &operator+=(FVec3 &lhs, FVec3 rhs) noexcept {
+        lhs.x += rhs.x;
+        lhs.y += rhs.y;
+        lhs.z += rhs.z;
+        return lhs;
+    }
+
     inline FVec3 operator-(FVec3 lhs, FVec3 rhs) noexcept {
         return {lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z};
+    }
+
+    inline FVec3 &operator-=(FVec3 &lhs, FVec3 rhs) noexcept {
+        lhs.x -= rhs.x;
+        lhs.y -= rhs.y;
+        lhs.z -= rhs.z;
+        return lhs;
     }
 
     inline FVec3 operator-(FVec3 vec) noexcept {
@@ -47,8 +61,22 @@ namespace engine {
         return {lhs.x * rhs, lhs.y * rhs, lhs.z * rhs};
     }
 
+    inline FVec3 &operator*=(FVec3 &lhs, float rhs) noexcept {
+        lhs.x *= rhs;
+        lhs.y *= rhs;
+        lhs.z *= rhs;
+        return lhs;
+    }
+
     inline FVec3 operator/(FVec3 lhs, float rhs) noexcept {
         return {lhs.x / rhs, lhs.y / rhs, lhs.z / rhs};
+    }
+
+    inline FVec3 &operator/=(FVec3 &lhs, float rhs) noexcept {
+        lhs.x /= rhs;
+        lhs.y /= rhs;
+        lhs.z /= rhs;
+        return lhs;
     }
 }
 
