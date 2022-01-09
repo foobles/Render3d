@@ -19,10 +19,10 @@ namespace engine {
     class GraphicsController {
     public:
         explicit GraphicsController(Graphics &graphics) noexcept;
-        GraphicsController(GraphicsController const &) = delete;
-        GraphicsController &operator=(GraphicsController const &) = delete;
-        GraphicsController(GraphicsController &&) = delete;
-        GraphicsController &operator=(GraphicsController &&) = delete;
+        GraphicsController(GraphicsController const &) noexcept = default;
+        GraphicsController &operator=(GraphicsController const &) noexcept = default;
+        GraphicsController(GraphicsController &&) noexcept = default;
+        GraphicsController &operator=(GraphicsController &&) noexcept = default;
 
         void set_color(Rgba24Color color);
         void draw_pixel(IVec2 pos);

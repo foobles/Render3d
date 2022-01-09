@@ -15,10 +15,10 @@ namespace engine {
     class InputController {
     public:
         explicit InputController(Input &input) noexcept;
-        InputController(InputController const &) = delete;
-        InputController &operator=(InputController const &) = delete;
-        InputController(InputController &&) = delete;
-        InputController &operator=(InputController &&) = delete;
+        InputController(InputController const &) noexcept = default;
+        InputController &operator=(InputController const &) noexcept = default;
+        InputController(InputController &&) noexcept = default;
+        InputController &operator=(InputController &&) noexcept = default;
 
         [[nodiscard]] bool is_key_down(Scancode sc) const noexcept;
         [[nodiscard]] bool is_mouse_button_down(MouseButton mb) const noexcept;
