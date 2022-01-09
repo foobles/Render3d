@@ -34,8 +34,10 @@ add_executable(RenderEngine3d
 
         src/engine/media/texture.cpp src/engine/media/texture.hpp
 
+        src/engine/3d/model.hpp
         src/engine/3d/camera.cpp src/engine/3d/camera.hpp
         src/engine/3d/transform.cpp src/engine/3d/transform.hpp
+        src/engine/3d/object3d.hpp
 
         src/engine/prim/ivec.hpp
         src/engine/prim/fvec.hpp
