@@ -4,7 +4,7 @@
 
 #include "engine/media/texture.hpp"
 
-#include <cstddef>
+#include <cstdint>
 #include "SDL_surface.h"
 #include "engine/assert.hpp"
 
@@ -47,11 +47,9 @@ Texture &Texture::operator=(Texture &&other) noexcept {
 
 Rgba24Color Texture::get_color(IVec2 pos) const noexcept {
     auto pixels = reinterpret_cast<char *>(texture->pixels);
-    auto row = reinterpret_cast<std::uint32_t *>(&pixels[texture->pitch * pos.y]);
-    std::uint32_t pixel = row[pos.x];
-    std::uint8_t r, g, b;
-    SDL_GetRGB(pixel, texture->format, &r, &g, &b);
-    return {r, g, b};
+    char *row = &pixels[texture->pitch * pos.y];
+    char *pixel = &row[pos.x * 4];
+    return {std::uint8_t(pixel[0]), std::uint8_t(pixel[1]), std::uint8_t(pixel[2])};
 }
 
 int Texture::get_width() const noexcept {
