@@ -31,14 +31,16 @@ add_executable(RenderEngine3d
         src/engine/io/keybinding.hpp
 
         src/engine/assert.hpp src/engine/assert.cpp
+
         src/engine/media/texture.cpp src/engine/media/texture.hpp
+
+        src/engine/3d/camera.cpp src/engine/3d/camera.hpp
 
         src/engine/prim/ivec.hpp
         src/engine/prim/fvec.hpp
         src/engine/prim/fmat.hpp
         src/engine/prim/color.hpp
         src/engine/prim/units.hpp
-        src/engine/assert.hpp src/engine/assert.cpp
         )
 
 target_include_directories(RenderEngine3d PRIVATE "${SOURCE_INCLUDES}" "${EXTERNAL_INCLUDES}")
