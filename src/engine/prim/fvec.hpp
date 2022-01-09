@@ -6,11 +6,9 @@
 #define RENDERENGINE3D_FVEC_HPP
 
 namespace engine {
-    struct FVec4 {
+    struct FVec2 {
         float x;
         float y;
-        float z;
-        float w;
     };
 
     struct FVec3 {
@@ -18,6 +16,62 @@ namespace engine {
         float y;
         float z;
     };
+
+    struct FVec4 {
+        float x;
+        float y;
+        float z;
+        float w;
+    };
+
+
+    inline FVec2 operator+(FVec2 lhs, FVec2 rhs) noexcept {
+        return {lhs.x + rhs.x, lhs.y + rhs.y};
+    }
+
+    inline FVec2 &operator+=(FVec2 &lhs, FVec2 rhs) noexcept {
+        lhs.x += rhs.x;
+        lhs.y += rhs.y;
+        return lhs;
+    }
+
+    inline FVec2 operator-(FVec2 lhs, FVec2 rhs) noexcept {
+        return {lhs.x - rhs.x, lhs.y - rhs.y};
+    }
+
+    inline FVec2 &operator-=(FVec2 &lhs, FVec2 rhs) noexcept {
+        lhs.x -= rhs.x;
+        lhs.y -= rhs.y;
+        return lhs;
+    }
+
+    inline FVec2 operator-(FVec2 vec) noexcept {
+        return {-vec.x, -vec.y};
+    }
+
+    inline FVec2 operator*(float lhs, FVec2 rhs) noexcept {
+        return {lhs * rhs.x, lhs * rhs.y};
+    }
+
+    inline FVec2 operator*(FVec2 lhs, float rhs) noexcept {
+        return {lhs.x * rhs, lhs.y * rhs};
+    }
+
+    inline FVec2 &operator*=(FVec2 &lhs, float rhs) noexcept {
+        lhs.x *= rhs;
+        lhs.y *= rhs;
+        return lhs;
+    }
+
+    inline FVec2 operator/(FVec2 lhs, float rhs) noexcept {
+        return {lhs.x / rhs, lhs.y / rhs};
+    }
+
+    inline FVec2 &operator/=(FVec2 &lhs, float rhs) noexcept {
+        lhs.x /= rhs;
+        lhs.y /= rhs;
+        return lhs;
+    }
 
     inline FVec4 cartesian_to_homogeneous(FVec3 vec) noexcept {
         return { vec.x, vec.y, vec.z, 1.0f};
